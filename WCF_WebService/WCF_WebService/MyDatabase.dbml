@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="MyDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="" Member="Företags">
+    <Type Name="Företag">
+      <Column Member="ID" AutoSync="Never" Type="System.String" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Member="Namn" Type="System.String" CanBeNull="false" />
+      <Column Member="Adress" Type="System.String" CanBeNull="false" />
+      <Column Member="Telefon" Type="System.String" CanBeNull="false" />
+      <Association Name="Företag_Lista" Member="Listas" ThisKey="ID" OtherKey="FöretagID" Type="Lista" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Erbjudandes">
+    <Type Name="Erbjudande">
+      <Column Member="ID" AutoSync="Never" Type="System.String" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Member="Titel" Type="System.String" CanBeNull="false" />
+      <Column Member="Beskrivning" Type="System.String" CanBeNull="false" />
+      <Column Member="Startdatum" Type="System.DateTime" CanBeNull="false" />
+      <Column Member="Slutdatum" Type="System.DateTime" CanBeNull="false" />
+      <Association Name="Erbjudande_Lista" Member="Listas" ThisKey="ID" OtherKey="ErbjudandeID" Type="Lista" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Listas">
+    <Type Name="Lista">
+      <Column Member="FöretagID" Type="System.String" CanBeNull="false" />
+      <Column Member="ErbjudandeID" Type="System.String" CanBeNull="false" />
+      <Association Name="Företag_Lista" Member="Företag" ThisKey="FöretagID" OtherKey="ID" Type="Företag" IsForeignKey="true" />
+      <Association Name="Erbjudande_Lista" Member="Erbjudande" ThisKey="ErbjudandeID" OtherKey="ID" Type="Erbjudande" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

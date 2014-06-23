@@ -1,0 +1,5 @@
+E:\Work\Projects\WebService\WCF_WebService\WCF_WebService\bin\WCF_WebService.dll
+E:\Work\Projects\WebService\WCF_WebService\WCF_WebService\bin\WCF_WebService.pdb
+E:\Work\Projects\WebService\WCF_WebService\WCF_WebService\obj\Debug\WCF_WebService.csprojResolveAssemblyReference.cache
+E:\Work\Projects\WebService\WCF_WebService\WCF_WebService\obj\Debug\WCF_WebService.dll
+E:\Work\Projects\WebService\WCF_WebService\WCF_WebService\obj\Debug\WCF_WebService.pdb
